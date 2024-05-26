@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@mui/material": "^5.15.18",
+    "@mui/x-data-grid": "^6.20.0"
+  }
+}
