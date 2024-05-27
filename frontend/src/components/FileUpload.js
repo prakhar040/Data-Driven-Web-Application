@@ -113,17 +113,17 @@ const FileUpload = () => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>Column 1</TableCell>
-                  <TableCell>Column 2</TableCell>
-                  {/* Add more columns as needed */}
+                  {Object.keys(uploadedData[0]).map((key, index) => (
+                    <TableCell key={index}>{key}</TableCell>
+                  ))}
                 </TableRow>
               </TableHead>
               <TableBody>
                 {uploadedData.map((row, index) => (
                   <TableRow key={index}>
-                    <TableCell>{row.column1}</TableCell>
-                    <TableCell>{row.column2}</TableCell>
-                    {/* Render other columns */}
+                    {Object.values(row).map((value, cellIndex) => (
+                      <TableCell key={cellIndex}>{value}</TableCell>
+                    ))}
                   </TableRow>
                 ))}
               </TableBody>
